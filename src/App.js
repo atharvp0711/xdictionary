@@ -26,7 +26,7 @@ const App = () => {
     let dictObj = dictionary.find(
       ({ word }) => word.toLowerCase() === wordInput.toLowerCase()
     );
-    let meaning = dictObj.meaning;
+    let meaning = dictObj.meaning || "Word not found in the dictionary";
     setDefinition(meaning);
   };
   return (
